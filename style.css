@@ -93,7 +93,6 @@ body{
 
 .gradient[color="blue"]{
     background-image: linear-gradient(45deg, #0136af, #22abfa);
-    z-index: 0;
 }
 .gradient[color="red"]{
     background-image: linear-gradient(45deg, #d62926, #ee625f);
@@ -114,6 +113,24 @@ body{
     left: 0;
     top: 0;
     z-index: -2;
+}
+
+.first{
+    z-index: 0;
+    animation: 1s width ease;
+}
+
+.second{
+    z-index: -1;
+}
+
+@keyframes width{
+    from{
+        width: 0%;
+    }
+    to{
+        width: 100%;
+    }
 }
 
 .info{
@@ -266,7 +283,7 @@ body{
 }
 
 .size.active{
-background-color: #0136af;
+background-color: var(--primary);
 color: #fff;
 }
 
